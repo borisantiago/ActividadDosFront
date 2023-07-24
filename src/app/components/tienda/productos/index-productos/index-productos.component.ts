@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { TiendaServiceService } from 'src/app/services/tienda-service';
+import { TiendaServiceService } from 'src/app/services/tienda-service.service';
 declare var iziToast:any;
 
 

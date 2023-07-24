@@ -43,8 +43,6 @@ export class TiendaServiceService {
   }
 
 
-
-
    //cliente
   registro_cliente(data:any):Observable<any>{
     let headers = new HttpHeaders().set('Content-type', 'application/json');

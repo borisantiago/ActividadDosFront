@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { GLOBAL } from 'src/app/services/GLOBAL';
-import { TiendaServiceService } from 'src/app/services/tienda-service';
+import { TiendaServiceService } from 'src/app/services/tienda-service.service';
 
 @Component({
   selector: 'app-inicio',

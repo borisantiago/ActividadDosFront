@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { TiendaServiceService } from 'src/app/services/tienda-service';
+import { TiendaServiceService } from 'src/app/services/tienda-service.service';
 declare var iziToast: any;
 
 @Component({
