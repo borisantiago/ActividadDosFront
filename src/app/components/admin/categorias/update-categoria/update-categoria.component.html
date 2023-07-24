@@ -1,0 +1,39 @@
+<app-sidebar></app-sidebar>
+
+<div class="col-9" style="float: right;">
+    <div class="border-bottom pt-5 mt-2 mb-3">
+        <h2 class="mt-2 mt-md-4 mb-3 pt-3">Categorias</h2>
+        <div class="d-flex flex-wrap flex-md-nowrap justify-content-between">
+          <p class="text-muted">Este módulo lista todos los categorias de la tienda.</p>
+          
+        </div>
+      </div>
+    
+      <form #editarForm="ngForm" (ngSubmit)="actualizar(editarForm)">
+        <div class="card box-shadow-sm">
+            <div class="card-header">
+                <h5 style="margin-bottom: 0px;">Editar de categoria</h5>
+            </div>
+            <div class="card-body">
+                  <div class="row">
+                    <div class="col-lg-7">
+                        <div class="row">
+                          <div class="col-lg-12 form-group">	
+                              <label for="">Nombre de categoria</label>
+                              <input type="text" class="form-control" placeholder="Ejemplo: Xiaomi" required name="titulo" [(ngModel)]="categoria.titulo">
+                          </div>
+    
+                        </div>
+                    </div>
+                    
+                  </div>
+            </div>
+            <div class="card-footer">
+                <button class="btn btn-primary mr-3" type="submit">Actualizar categoria</button>
+                
+                <a class="btn btn-warning" [routerLink]="['/admin/categorias']" routerLinkActive="router-link-active" >Regresar</a>
+            </div>
+      </div> 
+      </form>
+</div>
+

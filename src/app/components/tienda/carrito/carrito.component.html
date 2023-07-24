@@ -1,0 +1,225 @@
+
+<app-nav></app-nav>
+
+<main class="cs-page-wrapper">
+
+    <nav class="bg-secondary mb-3" aria-label="breadcrumb">
+        <div class="container">
+          <ol class="breadcrumb breadcrumb-alt mb-0">
+            <li class="breadcrumb-item">
+              <a href="index.html"><i class="cxi-home"></i></a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">Checkout</li>
+          </ol>
+        </div>
+      </nav>
+
+
+      <!-- Page content -->
+      <section class="container pt-3 pt-md-4 pb-3 pb-sm-4 pb-lg-5 mb-4">
+        <div class="row">
+
+          <!-- Checkout content -->
+          <div class="col-lg-8 pr-lg-6">
+            <div class="d-flex align-items-center justify-content-between pb-2 mb-4">
+              <h1 class="mb-0">Checkout</h1>
+              <a [routerLink]="['/productos']"><strong>Regresar a la tienda</strong></a>
+            </div>
+
+            
+            <hr class="border-top-0 border-bottom pt-2 mb-4">
+
+            <!-- Order review -->
+            <h2 class="h4 mb-4">1. Detalles de orden</h2>
+
+
+            <ng-container>
+              <div class="bg-secondary rounded mb-5" >
+                <!-- Item -->
+                <div class="media px-2 px-sm-4 py-4 border-bottom" >
+                  <a [routerLink]="['/productos/',]" style="min-width: 80px;">
+                    <img src="https://createx.createx.studio/assets/img/ecommerce/shop/01.jpg" width="80" alt="Product thumb">
+                  </a>
+                  <div class="media-body w-100 pl-3">
+                    <div class="d-sm-flex">
+                      <div class="pr-sm-3 w-100" style="max-width: 16rem;">
+                        <h3 class="font-size-sm mb-3">
+                          <a [routerLink]="['/productos/']" class="nav-link font-weight-bold">Bufanda Otavalence</a>
+                        </h3>
+                        <ul class="list-unstyled font-size-xs mt-n2 mb-2">
+                          <li class="mb-0"><span class="text-muted">Bufandas</span> </li>
+                        </ul>
+                      </div>
+                      
+                      <div class="d-flex pr-sm-3" >
+                            <div class="text-nowrap pt-2">
+                              <span style="font-size: 1.2rem !important;" class="font-size-xs text-muted">$18</span>
+                            </div>
+                      </div>
+                      
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="px-3 px-sm-4 py-4 text-right">
+                  <span class="text-muted">Subtotal:<strong class="text-dark font-size-lg ml-2">$18</strong></span>
+                </div>
+              </div>
+  
+            </ng-container>
+            
+            
+            
+
+            <!-- Adresses -->
+            <h2 class="h4 mb-4">2. Dirección de envio</h2>
+            <div class="row pb-3">
+              <div class="col-12">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="row" >
+                      <h4>No tiene una dirección principal establecida</h4>
+                    </div>
+                    <div class="row" >
+                      <div class="col-lg-12">
+                        <dl>
+                          <dt>Destinatario</dt>
+                          <dd>Santiago Bernabeu</dd>
+                          <dt>Dirección</dt>
+                          <dd>Av. Lauro Guerrero</dd>
+                          <dt>Código Postal</dt>
+                          <dd>18095</dd>
+                          <dt >Teléfono</dt> 
+                          <dd>+593 983210809</dd>
+                        </dl>
+                      </div>
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+
+            <hr class="mb-4 pb-2">
+
+            <!-- Shipping -->
+            <h2 class="h4 mb-4">3. Métodos de Envío</h2>
+            <div class="custom-control custom-radio mb-3" >
+              <input (change)="calcular_carrito()" type="radio" class="custom-control-input" id="courier" name="shipping" checked name="precio_envio" >
+              <label for="courier" class="custom-control-label d-flex align-items-center">
+                <span>
+                  <strong class="d-block">Courrier DHT</strong>
+                  <span class="text-muted font-size-sm">2 semanas</span>
+                </span>
+                <span class="ml-auto">$8</span>
+              </label>
+            </div>
+
+            <hr class="border-top-0 border-bottom pt-4 mb-4">
+
+            <!-- Payment -->
+            <h2 class="h4 pt-2 mb-4">4. Métodos de pago</h2>
+            <div class="row pb-4">
+              <div class="col-lg-7">
+                <div class="accordion-alt" id="payment-methods">
+
+                  <!-- Card: Credit card -->
+                  <div class="card mb-3 px-4 py-3 border rounded box-shadow-sm">
+                    <div class="card-header py-2">
+                      <div class="accordion-heading custom-control custom-radio" data-toggle="collapse" data-target="#cc-card">
+                        <input type="radio" class="custom-control-input" id="cc" name="payment" checked>
+                        <label for="cc" class="custom-control-label d-flex align-items-center">
+                          <strong class="d-block mr-3">Credit card</strong>
+                          <img src="assets/tienda/img/ecommerce/cards.png" width="108" alt="Credit cards">
+                        </label>
+                      </div>
+                    </div>
+                    <div class="collapse show" id="cc-card" data-parent="#payment-methods">
+                      <div class="card-body pt-3 pb-0">
+                        <div class="form-group mb-3">
+                          <label for="cc-number">Card number</label>
+                          <!-- 
+                          <input type="text" id="cc-number" class="form-control form-control-lg" data-format="card" placeholder="0000 0000 0000 0000">
+                          -->
+                          <input name="ncard" type="text" id="cc-number" class="form-control form-control-lg" data-format="card" placeholder="0000 0000 0000 0000">
+                        </div>
+                        <div class="d-flex">
+                          <div class="form-group mb-3 mr-3">
+                            <label for="cc-exp-date">Expiry date</label>
+                            <!-- 
+                            <input type="text" id="cc-exp-date" class="form-control form-control-lg" data-format="date" placeholder="mm/yy">
+                            -->
+                            <input name="exp" type="text" id="cc-exp-date" class="form-control form-control-lg" data-format="date" placeholder="mm/yyyy">
+                          </div>
+                          <div class="form-group mb-3">
+                            <label for="cc-cvc">CVC</label>
+                            <!-- 
+                            <input type="text" id="cc-cvc" class="form-control form-control-lg" data-format="cvc" placeholder="000">
+                            -->  
+                            <input name="cvc" type="text" id="cc-cvc" class="form-control form-control-lg" data-format="cvc" placeholder="000">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                 
+                </div>
+              </div>
+            </div>
+
+            <hr class="mb-4 pb-2">
+
+            <!-- Additional info -->
+            <h2 class="h4 mb-4">5. Información adicional (opcional)</h2>
+            <div class="form-group">
+              <label for="ch-notes">Mensajej</label>
+              <textarea id="ch-notes" class="form-control form-control-lg" rows="5" placeholder="Mensaje" name="nota" ></textarea>
+            </div>
+          </div>
+
+
+          <!-- Order totals (sticky sidebar) -->
+          <!-- For more sticky sidebar options visit https://abouolia.github.io/sticky-sidebar/#options -->
+          <aside class="col-lg-4">
+            <div class="sidebar-sticky">
+              <div class="sidebar-sticky-inner">
+        
+                <div class="bg-secondary rounded mb-4">
+                  <div class="border-bottom p-4">
+                    <h2 class="h4 mb-0">Order totals</h2>
+                  </div>
+                  <ul class="list-unstyled border-bottom mb-0 p-4">
+                    <li class="d-flex justify-content-between mb-2">
+                      <span class="font-weight-bold">Subtotal:</span>
+                      <span class="font-weight-bold">$18</span>
+                    </li>
+                    <li class="d-flex justify-content-between mb-2">
+                      <span>Envio:</span>
+                      <span>$8</span>
+                    </li>
+                    
+                    
+                  </ul>
+                  <div class="d-flex justify-content-between p-4">
+                    <span class="h5 mb-0">Total a pagar:</span>
+                    <span class="h5 mb-0">$26</span>
+                  </div>
+                </div>
+                <ng-container >
+                  <button type="button" class="btn btn-primary btn-lg btn-block">Completar order</button>
+              
+                  
+                </ng-container>
+                
+
+              </div>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+</main>
+
+<app-footer></app-footer>

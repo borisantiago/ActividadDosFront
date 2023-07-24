@@ -1,0 +1,137 @@
+<app-nav></app-nav>
+
+<main class="cs-page-wrapper">
+
+    <!-- Breadcrumb -->
+    
+    <nav class="bg-secondary mb-3" aria-label="breadcrumb">
+        <div class="container">
+          <ol class="breadcrumb breadcrumb-alt mb-0">
+            <li class="breadcrumb-item">
+              <a [routerLink]="['/']"><i class="cxi-home"></i></a>
+            </li>
+            <li class="breadcrumb-item">
+              <a >2323232</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">1111</li>
+          </ol>
+        </div>
+      </nav>
+    
+      <!-- Page title -->
+      <section class="container d-md-flex align-items-center justify-content-between py-3 py-md-4 mb-3">
+        <h1 class="mb-1 mb-md-0">titulo</h1>
+        <span class="text-muted" ><strong>Art. No.</strong> id </span>
+      </section>
+
+      <!-- Single product -->
+      <section class="container py-md-3 py-5 mb-2" style="padding-top: 0.1rem !important;">
+        <div class="row">
+          <div class="col-md-6 mb-md-0 mb-4">
+
+            <!-- Product gallery -->
+            <div class="cs-carousel cs-gallery cs-product-gallery mx-auto" style="max-width: 570px;">
+              
+              <!-- <img src="https://i.pinimg.com/originals/d5/7e/67/d57e67d6bdda0b600ee9b5852708dbad.jpg" alt=""> -->
+              <!-- Product gallery item -->
+              <a class="cs-gallery-item"  href="https://i.pinimg.com/originals/d5/7e/67/d57e67d6bdda0b600ee9b5852708dbad.jpg" data-sub-html='<h6 class="text-light">Gallery image caption #1</h6>'>
+                <img class="rounded" src="https://i.pinimg.com/originals/d5/7e/67/d57e67d6bdda0b600ee9b5852708dbad.jpg" alt="Carousel image">
+                <span class="cs-gallery-caption">Imagen #1</span>
+              </a>
+              
+              <!-- Product gallery thumbnails -->
+              <div class="cs-thumbnails" id="cs-thumbnails">
+                <button type="button" data-nav="0">
+                  <img src="https://i.pinimg.com/originals/d5/7e/67/d57e67d6bdda0b600ee9b5852708dbad.jpg" alt="Thumbnail">
+                </button>
+                <button type="button" data-nav="1">
+                  <img src="https://createx.createx.studio/assets/img/ecommerce/shop/single/02.jpg" alt="Thumbnail">
+                </button>
+                <button type="button" data-nav="2">
+                  <img src="https://createx.createx.studio/assets/img/ecommerce/shop/single/03.jpg" alt="Thumbnail">
+                </button>
+                <button type="button" data-nav="3">
+                  <img src="https://createx.createx.studio/assets/img/ecommerce/shop/single/04.jpg" alt="Thumbnail">
+                </button>
+                <button type="button" data-nav="4" class="video-indicator">
+                  <img src="https://createx.createx.studio/assets/img/ecommerce/shop/single/05.jpg" alt="Thumbnail">
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 pl-xl-5">
+            <div class="d-sm-flex align-items-center justify-content-between mb-2">
+
+              <!-- Price -->
+
+              <div class="d-flex align-items-center mb-sm-0 mb-4">
+                <span class="h3 d-inline-block mb-0">$precio</span>
+              </div>
+
+              <!-- Rating -->
+              <div class="text-sm-right">
+                <div class="star-rating ml-auto">
+                  <i class="sr-star cxi-star-filled active"></i>
+                  <i class="sr-star cxi-star-filled active"></i>
+                  <i class="sr-star cxi-star-filled active"></i>
+                  <i class="sr-star cxi-star-filled active"></i>
+                  <i class="sr-star cxi-star"></i>
+                </div>
+                <span class="font-size-sm text-muted">12 reviews</span>
+              </div>
+            </div>
+
+            <form class="row">              
+              <div class="col-sm-8 order-sm-1 order-2">
+                <div class="form-group">
+                  <label for="size">variedad</label>
+                  <select class="form-control custom-select" id="variedad" name="variedad">
+                    <option value="" selected disabled>Seleccionar</option>
+                    <option value="" >variedades</option>
+                  </select>
+                </div>
+              </div>
+              
+              <div class="col-lg-6 order-lg-4 order-4">
+                <button *ngIf="!btn_cart" class="btn btn-block btn-primary" (click)="agregar_producto()">
+                  <i class="cxi-cart mr-2"></i>
+                  Agregar al carrito
+                </button>
+
+              </div>
+              
+            </form>
+
+            <!-- Share -->
+            <div class="mb-5 text-nowrap">
+              <h6 class="d-inline-block align-middle mr-2 mb-0">Compartir:</h6>
+              <a  class="social-btn sb-solid align-middle mr-2" data-toggle="tooltip" title="Facebook">
+                <i class="cxi-facebook"></i>
+              </a>
+              <a  class="social-btn sb-solid align-middle mr-2" data-toggle="tooltip" title="Twitter">
+                <i class="cxi-twitter"></i>
+              </a>
+              <a  class="social-btn sb-solid align-middle" data-toggle="tooltip" title="Pinterest">
+                <i class="cxi-pinterest"></i>
+              </a>
+            </div>
+
+            <!-- Payment -->
+            <div class="pb-3 text-nowrap" data-simplebar data-simplebar-auto-hide="false">
+              <a class="d-inline-block mb-3 mr-xl-4 mr-3">
+                <img src="assets/tienda/img/ecommerce/visa.jpg" alt="Visa" class="border rounded">
+              </a>
+              <a class="d-inline-block mb-3 mr-xl-4 mr-3">
+                <img src="assets/tienda/img/ecommerce/master-card.jpg" alt="Mastercard" class="border rounded">
+              </a>
+              <a class="d-inline-block mb-3">
+                <img src="assets/tienda/img/ecommerce/pay-pal.jpg" alt="PayPal" class="border rounded">
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+</main>
+
+<app-footer></app-footer>

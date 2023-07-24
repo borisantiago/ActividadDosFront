@@ -1,0 +1,124 @@
+<app-nav></app-nav>
+
+<main class="cs-page-wrapper">
+    
+
+    <div class="container">
+        <h3>Video</h3>
+        <iframe
+            width="560" 
+            height="315" 
+            src="https://www.youtube.com/embed/4TZiMvJ65Wc" 
+            title="YouTube video player" 
+            frameborder="0" 
+            allow="
+                accelerometer; 
+                autoplay; 
+                clipboard-write; 
+                encrypted-media; 
+                gyroscope; 
+                picture-in-picture; 
+                web-share"
+            allowfullscreen>
+    </iframe>
+    </div>
+    
+    <section class="py-5" style="background-color: #e5e8ed;">
+        <div class="container my-lg-2 py-2 py-md-4">
+          <div class="d-flex align-items-center justify-content-between pb-sm-1 mb-5">
+            <h2 class="h1 pr-3 mb-0">Productos</h2>
+            <div class="tns-custom-controls cs-controls-inverse" id="custom-controls-related" tabindex="0">
+              <button type="button" data-controls="prev" tabindex="-1">
+                <i class="cxi-arrow-left"></i>
+              </button>
+              <button type="button" data-controls="next" tabindex="-1">
+                <i class="cxi-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+          <div class="cs-carousel pb-2">
+            <div class="cs-carousel-inner-two" data-carousel-options=''>
+
+              <!-- Item -->
+              <div   >
+                <div class="card card-product mx-auto">
+                  <div class="card-product-img">
+                    <a [routerLink]="['/producto/1',]" target="_blank" class="card-img-top">
+                      <img src="https://i.pinimg.com/originals/d5/7e/67/d57e67d6bdda0b600ee9b5852708dbad.jpg" alt="Product image">
+                    </a>
+                    <div class="card-product-widgets-bottom">
+                      <a [routerLink]="['/producto/1',]" target="_blank" class="btn-wishlist ml-auto" data-toggle="tooltip" data-placement="left" title="Add to wishlist"></a>
+                    </div>
+                  </div>
+                  <div class="card-body bg-0 pb-2">
+                    <h3 class="card-product-title text-truncate mb-2">
+                      <a [routerLink]="['/producto/1',]" target="_blank" class="nav-link">titulo</a>
+                    </h3>
+                    <div class="d-flex align-items-center">
+                      <span class="h5 d-inline-block mb-0">$precio</span>
+                    </div>
+                  </div>
+                </div>
+                
+                
+                
+              </div>
+
+            </div>
+            
+          </div>
+        </div>
+      </section>
+    
+
+    <!-- Mobile app CTA -->
+    <section class="bg-dark">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-md-5">
+              <img src="../../assets/tienda/img/ecommerce/home/mobile-app-illustration.png" class="d-block mx-auto my-4 mb-lg-0 mt-lg-n4" width="498" alt="Illustartion">
+            </div>
+            <div class="col-md-7 col-lg-6 pt-3 pb-5 pt-md-5 pb-md-4 ml-auto">
+              <h2 class="text-light text-center text-md-left pb-3">¡Disfruta haciendo compras con nuestra tienda!</h2>
+              <div class="d-flex flex-wrap flex-sm-nowrap justify-content-center justify-content-md-start">
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section class="container pt-5 pb-2 pb-sm-5 py-md-5 py-lg-6">
+        <div class="row py-3">
+          <div class="col-sm-6 col-md-3 text-center mb-md-0 mb-4 pb-md-0 pb-3">
+            <img class="mb-4" src="../../assets/tienda/img/ecommerce/home/services/delivery.svg" width="48" alt="Worldwide Shipping">
+            <h5 class="h5 mb-2">Envíos nacionales rápidos</h5>
+            
+              <p class="mb-0 text-muted">Servientras - Encomiendas - Express</p>
+            
+          </div>
+          <span class="divider-vertical d-sm-block d-none"></span>
+          <div class="col-sm-6 col-md-3 text-center mb-md-0 mb-4 pb-md-0 pb-3">
+            <img class="mb-4" src="../../assets/tienda/img/ecommerce/home/services/support.svg" width="48" alt="Customer Support">
+            <h5 class="h5 mb-2">Soporte 24/7</h5>
+            <p class="mb-0 text-muted">Compra a cualquier hora del día</p>
+          </div>
+          <span class="divider-vertical d-sm-block d-none"></span>
+          <div class="col-sm-6 col-md-3 text-center mb-md-0 mb-4 pb-md-0 pb-3">
+            <img class="mb-4" src="../../assets/tienda/img/ecommerce/home/services/guarantee.svg" width="48" alt="Customer Support">
+            <h5 class="h5 mb-2">Garantía de reembolso</h5>
+            <p class="mb-0 text-muted">Si te equivocaste de producto te lo cambiamos</p>
+          </div>
+          <span class="divider-vertical d-sm-block d-none"></span>
+          <div class="col-sm-6 col-md-3 text-center mb-md-0 mb-4 pb-md-0 pb-3">
+            <img class="mb-4" src="../../assets/tienda/img/ecommerce/home/services/payment.svg" width="48" alt="Customer Support">
+            <h5 class="h5 mb-2">Pago seguro en línea</h5>
+            <p class="mb-0 text-muted">Nos responsabilizamos de tu compra</p>
+          </div>
+        </div>
+    </section>
+
+</main>
+
+
+<app-footer></app-footer>

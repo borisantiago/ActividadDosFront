@@ -1,0 +1,120 @@
+<app-sidebar></app-sidebar>
+
+<div class="col-9" style="float: right;">
+  <div class="border-bottom pt-5 mt-2 mb-3">
+    <h2 class="mt-2 mt-md-4 mb-3 pt-3">Categorias</h2>
+    <div class="d-flex flex-wrap flex-md-nowrap justify-content-between">
+      <p class="text-muted">Este módulo lista todos los producros de la tienda.</p>
+      <p class="font-size-sm font-weight-medium pl-md-4"><a class="text-nowrap" [routerLink]="['/admin/categoria/registro']" >Registrar nuevo<i class="cxi-angle-right font-size-base align-middle ml-1"></i></a></p>
+    </div>
+  </div>
+
+  <div class="card box-shadow-sm">
+        <div class="card-header">
+            <h5 style="margin-bottom: 0px;">Filtro de categorias</h5>
+            <div class="row mt-2">
+              <div class="col-8">
+                <div class="input-group">
+                  <!-- <input class="form-control" (keyup)="filtrar()" style="width: 100px;" type="text" placeholder="Titulo de categoria" name="filtro" [(ngModel)]="filtro" > -->
+                  <input class="form-control" style="width: 100px;" type="text" placeholder="Titulo de categoria" name="filtro" [(ngModel)]="filtro" > 
+                </div>
+              </div>
+              
+            </div>
+        </div>
+   
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-bordered">
+                  <thead class="thead-dark">
+                    <tr>
+                  
+                      <th>#</th>
+                      <th>Logo</th>
+                      <th>Nombre</th>
+                      <th>OP</th>
+
+                    </tr>
+                  </thead>
+
+                  <ng-container >
+                    <tbody >
+                      <tr>
+
+                        <td>1111</td>
+                        
+                        <td>  
+                          <h6 style="padding-bottom: 0; margin-bottom: 0;">
+                            <img style="width: 65px;" src="https://i.pinimg.com/originals/d5/7e/67/d57e67d6bdda0b600ee9b5852708dbad.jpg" class="img-thumbnail rounded-0" alt="Square image">
+                            
+                          </h6>
+                        </td>
+                        
+                        <td>
+                          <a style="text-decoration: none;" >
+                            <span style="color: #2E187F;">
+                              &nbsp;&nbsp;
+                              <b>
+                                2222
+                              </b>
+                            </span>
+                          </a>
+                        </td>
+                        
+                        <td>
+                          <div class="btn-group dropdown">
+                            <button type="button" class="btn btn-outline-secondary btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                             OPCIONES
+                            </button>
+                            <div class="dropdown-menu">
+                              <a class="dropdown-item" [routerLink]="['/admin/categoria/1']">Editar categoria</a>
+                              <a class="dropdown-item" style="cursor: pointer;" data-toggle="modal" >Eliminar categoria</a>
+                             
+                            </div>
+                          </div>
+
+                           
+                          
+                          <div class="modal fade" tabindex="-1" style="display: none;" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered" role="document">
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  <h6 class="modal-title">¿Desea eliminar la categoria</h6>
+                                  <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">x</span></button>
+                                </div>
+                                <div class="modal-body">
+                                  <h5 class="fs-sm">Producto, <span style="color: #146D76;">3333</span></h5>
+                                </div>
+                                <div class="modal-footer">
+                                  <button class="btn btn-secondary btn-sm" type="button" data-dismiss="modal">Cancelar</button>
+                                  
+                                  <button  class="btn btn-primary btn-sm"  type="button">Si, eliminar</button>
+                                  
+                                  <button  type="button" class="btn btn-secondary" disabled>
+                                    <span class="spinner-grow spinner-grow-sm me-2" role="status" aria-hidden="true"></span>
+                                    Eliminando...
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                           
+                        </td>
+                      </tr>
+                    </tbody>
+
+                  </ng-container>
+
+                  
+                </table>
+            </div>
+        </div>
+
+    
+
+       
+  </div> 
+</div>
+
+
+

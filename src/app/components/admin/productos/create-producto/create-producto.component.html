@@ -1,0 +1,97 @@
+<app-sidebar></app-sidebar>
+
+<div class="col-9" style="float: right;">
+    <div class="border-bottom pt-5 mt-2 mb-3">
+        <h2 class="mt-2 mt-md-4 mb-3 pt-3">Producto</h2>
+          <div class="d-flex flex-wrap flex-md-nowrap justify-content-between">
+            <p class="text-muted">Agregar nuevo</p>
+          </div>
+        </div>
+      
+        <form #registroForm="ngForm" (ngSubmit)="registro(registroForm)">
+          <div class="card box-shadow-sm">
+              <div class="card-header">
+                  <h5 style="margin-bottom: 0px;">Registro de producto</h5>
+              </div>
+              <div class="card-body">
+                    <div class="row">
+                      <div class="col-lg-8">
+                          <div class="row">
+                            <div class="col-lg-7 form-group">	
+                                <label for="">Nombre de producto</label>
+                                <input type="text" class="form-control" placeholder="Nombre de producto" required name="Nombre" [(ngModel)]="producto.Nombre">
+                            </div>
+                            <div class="col-lg-5 form-group">	
+                              <label for="">Código producto</label>
+                              <input type="number" class="form-control" placeholder="Cantidad inicial" required name="codigo" [(ngModel)]="producto.codigo">
+                          </div>
+                            <div class="col-lg-3 form-group">	
+                                <label for="">Stock</label>
+                                <input type="number" class="form-control" placeholder="Cantidad inicial" required name="stock" [(ngModel)]="producto.stock">
+                            </div>
+                            <div class="col-lg-3 form-group">	
+                                <label for="">Precio</label>
+                                <input type="number" class="form-control" placeholder="Precio" required name="precio" [(ngModel)]="producto.precio">
+                            </div>
+                            <div class="col-lg-3 form-group" >	
+                                <label >Categoría</label>
+                                <select class="form-control custom-select" id="select-input" required name="categoria" [(ngModel)]="producto.categoria" >
+                                  <option value="" disabled-selected>Seleccionar</option>
+                                  
+                                    <option *ngFor="let item of categorias" value="{{item._id}}"> {{item.Nombre}} </option>
+                                    <option value="1">1</option>
+                                  
+                                </select>  
+                            </div>
+
+                            <div class="col-lg-3 form-group">	
+                              <label for="">Descuento</label>
+                              <input type="number" class="form-control" placeholder="Descuento" required name="descuento" [(ngModel)]="producto.descuento">
+                          </div>
+      
+                            <div class="col-lg-12 form-group">
+                                <label for="">Descripción corta</label>
+                                <textarea class="form-control" style="height: 115px;" placeholder="Nombre de producto" required rows="3" name="descripcion" [(ngModel)]="producto.descripcion">
+      
+                                </textarea>
+                            </div>
+      
+                            
+      
+                          </div>
+                      </div>
+      
+                      <div class="col-lg-4">
+                        <div class="row">
+                          <div class="col-lg-12 form-group">	
+                              <label for="">Portada</label>
+                              <div class="custom-file">
+                                <input class="custom-file-input" type="file" id="file-input" (change)="fileChangeEvent($event)">
+                                <label class="custom-file-label" id="input-portada" for="file-input" style="white-space:nowrap; overflow: hidden;">Seleccionar imagen</label>
+                              </div>
+                          </div>
+      
+                          <br>
+                          
+                          <div class="col-lg-12 ">
+                            <img [src]="imgSelect" class="img-thumbnail" alt="Rounded image">
+                          </div>
+                        </div>
+                      </div>
+      
+                      
+                        <div class="col-lg-12 form-group pt-3">
+                          <tinymce  name="contenido" [(ngModel)]="producto.contenido"></tinymce>
+                        </div>
+                      
+                    </div>
+              </div>
+              <div class="card-footer">
+                  <button  class="btn btn-primary mr-3" type="submit">Crear producto</button>
+                  
+                  <a class="btn btn-warning" [routerLink]="['/admin/productos']" routerLinkActive="router-link-active" >Regresar</a>
+              </div>
+        </div> 
+        </form>
+</div>
+
